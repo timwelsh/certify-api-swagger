@@ -1,0 +1,77 @@
+---
+swagger: "2.0"
+info:
+  title: Certify
+  description: Certify API Swagger
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      responses:
+        200:
+          description: Success
+          schema:
+            $ref: '#/definitions/Users'
+definitions:
+  Users:
+    title: Root Type for Users
+    description: The root of the Users type's schema.
+    type: object
+    properties:
+      Users:
+        type: array
+        items:
+          $ref: '#/definitions/Users'
+    example: |-
+      {
+          "Users": [
+              {
+                  "ID": "fc12bf3a-766e-4ec3-b2ae-60f2efe9505d",
+                  "UserName": "johnsmith@circp.com",
+                  "FirstName": "John",
+                  "LastName": "Smith",
+                  "Email": "johnsmith@circp.com",
+                  "EmployeeID": "JSMITH002",
+                  "MobilePhone": "2075551212",
+                  "Role": "Accountants",
+                  "Treasurer": 1,
+                  "FullAdministrator": 1,
+                  "UserAdministrator": 0,
+                  "DepartmentID": "c456ab38-8f74-49e2-a47b-178f72c2f45f",
+                  "EmpGLD1ID": "2ea4ee07-7706-4a1e-a8f8-f56ea48487d0",
+                  "EmpGLD2ID": "",
+                  "EmpGLD3ID": "",
+                  "EmpGLD4ID": "",
+                  "EmpGLD5ID": "",
+                  "Culture": "en-US",
+                  "Language": "en",
+                  "Currency": "USD",
+                  "LastModifiedDate": "2017-8-10",
+                  "Active": 1
+              },
+              {
+                  "ID": "967ab3a2-f389-4ee4-a51b-772d95fa9fbc",
+                  "UserName": "daviddoe@circp.com",
+                  "FirstName": "David",
+                  "LastName": "Doe",
+                  "Email": "daviddoe@circp.com",
+                  "EmployeeID": "DDOE001",
+                  "MobilePhone": "",
+                  "Role": "Employees",
+                  "Treasurer": 0,
+                  "FullAdministrator": 0,
+                  "UserAdministrator": 1,
+                  "DepartmentID": "c456ab38-8f74-49e2-a47b-178f72c2f45f",
+                  "EmpGLD1ID": "",
+                  "EmpGLD2ID": "",
+                  "EmpGLD3ID": "",
+                  "EmpGLD4ID": "",
+                  "EmpGLD5ID": "",
+                  "Culture": "en-US",
+                  "Language": "en",
+                  "Currency": "USD",
+                  "LastModifiedDate": "2018-7-21",
+                  "Active": 1
+              }
+          ]
+      }
