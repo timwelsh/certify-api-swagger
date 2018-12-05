@@ -21,7 +21,7 @@ definitions:
       Users:
         type: array
         items:
-          $ref: '#/definitions/Users'
+          $ref: '#/definitions/User'
     example: |-
       {
           "Users": [
@@ -74,4 +74,82 @@ definitions:
                   "Active": 1
               }
           ]
+      }
+  User:
+    title: Root Type for User
+    description: The root of the User type's schema.
+    type: object
+    properties:
+      ID:
+        type: string
+      UserName:
+        type: string
+      FirstName:
+        type: string
+      LastName:
+        type: string
+      Email:
+        type: string
+      EmployeeID:
+        type: string
+      MobilePhone:
+        type: string
+      Role:
+        type: string
+      Treasurer:
+        format: int32
+        type: integer
+      FullAdministrator:
+        format: int32
+        type: integer
+      UserAdministrator:
+        format: int32
+        type: integer
+      DepartmentID:
+        type: string
+      EmpGLD1ID:
+        type: string
+      EmpGLD2ID:
+        type: string
+      EmpGLD3ID:
+        type: string
+      EmpGLD4ID:
+        type: string
+      EmpGLD5ID:
+        type: string
+      Culture:
+        type: string
+      Language:
+        type: string
+      Currency:
+        type: string
+      LastModifiedDate:
+        type: string
+      Active:
+        format: int32
+        type: integer
+    example: |-
+      {
+          "ID": "fc12bf3a-766e-4ec3-b2ae-60f2efe9505d",
+          "UserName": "johnsmith@circp.com",
+          "FirstName": "John",
+          "LastName": "Smith",
+          "Email": "johnsmith@circp.com",
+          "EmployeeID": "JSMITH002",
+          "MobilePhone": "2075551212",
+          "Role": "Accountants",
+          "Treasurer": 1,
+          "FullAdministrator": 1,
+          "UserAdministrator": 0,
+          "DepartmentID": "c456ab38-8f74-49e2-a47b-178f72c2f45f",
+          "EmpGLD1ID": "2ea4ee07-7706-4a1e-a8f8-f56ea48487d0",
+          "EmpGLD2ID": "",
+          "EmpGLD3ID": "",
+          "EmpGLD4ID": "",
+          "EmpGLD5ID": "",
+          "Culture": "en-US",
+          "Language": "en",
+          "Currency": "USD",
+          "LastModifiedDate": "2017-8-10",
+          "Active": 1
       }
